@@ -3,7 +3,7 @@
 setup:
 	mkdir -p dist
 	mkdir -p build
-	cd build && cmake ..
+	cd build && cmake .. -D"PICO_BOARD=pico_w"
 
 build_binary:
 	cd build/src && make -j4 && cp main.uf2 ../../dist
